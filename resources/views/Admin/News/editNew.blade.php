@@ -44,7 +44,8 @@
                 <div class="form-group col-md-4">
                     <label for="summary">Summary:</label>
                     
-                    <input  type="textarea" class="form-control" name="txtsummary" value="{!! old ('txtsummary',isset($news)?$news['summary']:NULL) !!}">
+                    
+                    <textarea name="txtsummary"  class="form-control" cols="50" rows="5">{!! old ('txtsummary',isset($news)?$news['summary']:NULL) !!}</textarea>
                 </div>
             </div>
             
@@ -73,7 +74,8 @@
                 <div class="col-md-4"></div>
                 <div class="form-group col-md-4">
                     <label for="name">Content:</label>
-                    <input type="text" class="form-control" name="txtcontent" value="{!! old ('txtcontent',isset($news)?$news['content']:NULL) !!}">
+                    
+                    <textarea class="form-control" name="txtcontent" cols="50" rows="7">{!! old ('txtcontent',isset($news)?$news['content']:NULL) !!}</textarea>
                 </div>
             </div>
              <div class="row">

@@ -21,6 +21,43 @@ Route::get('admin_face', function () {
     return view('admin.face.source.indexAD');
 });
 
+
+// dang nhap admin
+
+Route::get('admindangnhap', [
+'as' => 'dangnhap',
+'uses' =>'LoginController@getAdminLogin',
+]);
+Route::post('admindangnhap', [
+'as' => 'dangnhap',
+'uses' =>'LoginController@postAdminLogin',
+]);
+
+// chạy trang chủ
+Route::get('trangchu', [
+'as' => 'index',
+'uses' =>'LoginController@getIndex',
+])->middleware('checklogin');
+
+// dang xuat
+Route::get('logout', [
+'as' => 'logout',
+'uses' =>'LoginController@logout',
+]);
+
+// chạy trang chủ
+Route::get('trangchu', [
+	'as' => 'index',
+	'uses' =>'LoginController@getIndex',
+])->middleware('checklogin');
+
+// dang xuat
+Route::get('logout', [
+	'as' => 'logout',
+	'uses' =>'LoginController@logout',
+]);
+
+
 //Thao Tác Với Category
 
 
