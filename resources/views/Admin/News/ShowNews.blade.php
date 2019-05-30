@@ -34,9 +34,9 @@
                     <tr>
                          <td> {!! $v["id"] !!} </td>
                         <td> {!! $v["titles"] !!} </td>
-                        <td> {!! $v["summary"] !!} </td>
+                        <td> {!! str_limit( $v["summary"], $limit = 50, $end = '...') !!} </td>
                         <td> {!! $v["date_post"] !!} </td>
-                        <td> {!! $v["content"] !!} </td>
+                        <td> {!! str_limit( $v["content"], $limit = 50, $end = '...') !!} </td>
                         <td> {!! $v["view"] !!} </td>
                         <td><img src="{!! asset('public/backend/images/'.$v["img"]) !!}" width="100" ></td>
                         <td> {!! $v["source"] !!} </td>

@@ -28,6 +28,10 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('user.pages.header',function($view){ 
            $cate = Category::select('id','name')->get()->toArray();
           $view->with('cate',$cate);              
+        });
+        view()->composer('user.pages.footer',function($view){ 
+           $cate = Category::select('id','name')->get()->toArray();
+          $view->with('cate',$cate);              
         });  
     }
 }

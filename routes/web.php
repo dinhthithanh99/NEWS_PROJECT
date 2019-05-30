@@ -14,13 +14,29 @@
 
 Route::get('user_face', [
 		'as' 	=> 'getIndex',
-		'uses' 	=> 'NewController@getIndex'
+		'uses' 	=> 'pageController@getIndex'
 	]);
 
 Route::get('admin_face', function () {
     return view('admin.face.source.indexAD');
 });
 
+
+Route::get('getType/{type}', [
+		'as' 	=> 'getType',
+		'uses' 	=> 'pageController@get_type_news'
+	]);
+
+Route::get('chitiet/{id}',[
+	'as'=>'chitiet',
+	'uses'=>'pageController@get_detail'
+]);
+
+Route::post('timkiem',[
+	'as'=>'timkiem',
+	'uses'=>'pageController@timkiem'
+]);
+//Thao Tác Với Category
 
 // dang nhap admin
 
@@ -44,23 +60,6 @@ Route::get('logout', [
 'as' => 'logout',
 'uses' =>'LoginController@logout',
 ]);
-
-// chạy trang chủ
-Route::get('trangchu', [
-	'as' => 'index',
-	'uses' =>'LoginController@getIndex',
-])->middleware('checklogin');
-
-// dang xuat
-Route::get('logout', [
-	'as' => 'logout',
-	'uses' =>'LoginController@logout',
-]);
-
-
-//Thao Tác Với Category
-
-
 
 Route::group(['prefix' => 'admin/category/'], function () {
 Route::get('addCate', [
