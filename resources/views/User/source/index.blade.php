@@ -26,7 +26,7 @@
 <div class="container-fluid pb-4 pt-4 ">
 
     <div class="container " style="padding-left: 100px !important;
-    padding-right: 10px !important;">
+    padding-right: 100px !important;">
         
         <div class="row mx-0"  >
             <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
@@ -84,7 +84,7 @@
                 @foreach($most as $value)
                 <div class="row pb-3" >
                     <div class="align-self-center" >
-                        <img style="height: 150px; width: 200px" src=" {!! asset('public/user/images/Images/'.$value['img']) !!}" alt="img" class="fh5co_most_trading"/>
+                        <img  style="height: 100px" src=" {!! asset('public/user/images/Images/'.$value['img']) !!}" alt="img" class="fh5co_most_trading"/>
                                      
                         <div class="most_fh5co_treding_font"> <a href="{!! url('chitiet',$value["id"]) !!}" >{{$value['titles']}}</a></div>
                         <div class="most_fh5co_treding_font_123">{{$values['source']}} &nbsp; {{$values['date_post']}} </div>

@@ -189,6 +189,26 @@ INSERT INTO `users` (`id`, `userName`, `password`, `img`, `created_at`, `updated
 (1, 'thanhvi', '1234567890', 'thethao1.jpg', NULL, NULL),
 (2, 'thithanh', '0987654321', 'giaoduc1.jpg', NULL, NULL);
 
+
+CREATE TABLE `nguoiquanly` (
+ `id` bigint(20) UNSIGNED NOT NULL,
+ `username` varchar(255),
+ `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+ 
+ `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+ 
+ `created_at` timestamp NULL DEFAULT NULL,
+ `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `nguoiquanly`
+--
+
+INSERT INTO `nguoiquanly` (`id`, `username`, `email`, `password`) VALUES
+(1, 'HoVanCo', 'vanco@gmail.com', '$2y$10$sH8ZmE3GXZshSaWLVJHSh..XKYcMLsCFYOHKzC66XNp0ncPqkxOoa'),
+(2, 'ThiThanh', 'thithanh@gmail.com', '$2y$10$auhivIT9XdYjZkijlO0fguwTKQ7F.beltxZvcnmacDIm3uYbLV1zW'),
+(3, 'ThiThuy', 'thithuy@gmail.com', '$2y$10$M.O0X3/sRLArKv1/zFkUH.2GLNcmctI7Mcjr6z7gr6GEBkqNMoIVO');
 --
 -- Indexes for dumped tables
 --

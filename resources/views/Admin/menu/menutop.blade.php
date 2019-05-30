@@ -7,8 +7,8 @@
 
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="public/backend/images/admin.jpg" alt="">Log Out
+                  <a href="{{ route('logout')}}">
+                    <img src="public/backend/images/admin.jpg" style="width: 40px;height: 40px" alt="">Log Out
                   </a>
                   
                 </li>
